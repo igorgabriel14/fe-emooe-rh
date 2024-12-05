@@ -1,6 +1,11 @@
 <script>
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+
 export default {
   name: 'HomeView',
+  components: {
+    LanguageSwitcher,
+  },
   data() {
     return {}
   },
@@ -8,5 +13,8 @@ export default {
 </script>
 
 <template>
-  <p class="text-lg">{{ $t('message.hello') }}</p>
+  <div class="m-4">
+    <LanguageSwitcher />
+    <p class="text-lg">{{ $t('message.hello') }}</p>
+  </div>
 </template>
