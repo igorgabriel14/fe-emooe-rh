@@ -8,5 +8,5 @@ export default {
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">Simplifique a gestão de desempenho</h1>
+  <p class="text-lg">{{ $t('message.hello') }}</p>
 </template>
