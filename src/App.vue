@@ -1,5 +1,10 @@
 <script>
+import { RouterView } from 'vue-router'
 export default {
+  name: 'App',
+  components: {
+    RouterView,
+  },
   data() {
     return {}
   },
@@ -7,5 +12,5 @@ export default {
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">Simplifique a gestão de desempenho</h1>
+  <RouterView />
 </template>
