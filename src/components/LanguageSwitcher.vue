@@ -3,23 +3,31 @@ export default {
   name: 'LanguageSwitcher',
   data() {
     return {
-      currentLanguage: 'pt',
+      currentLanguage: this.getSavedLanguage() || 'pt',
     }
   },
   methods: {
     changeLanguage(lang) {
       this.$i18n.locale = lang
+      localStorage.setItem('language', lang)
+    },
+    getSavedLanguage() {
+      return localStorage.getItem('language')
     },
   },
   mounted() {
-    this.$i18n.locale = 'pt'
-    document.documentElement.lang = this.$i18n.locale
-    document.title = this.$t('title')
+    const savedLanguage = this.getSavedLanguage()
+    if (savedLanguage) {
+      this.changeLanguage(savedLanguage)
+    } else {
+      this.changeLanguage(this.currentLanguage)
+    }
   },
   watch: {
     '$i18n.locale'(newLocale) {
       document.documentElement.lang = newLocale
       document.title = this.$t('title')
+      this.currentLanguage = newLocale
     },
   },
 }

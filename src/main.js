@@ -7,8 +7,10 @@ import './style.css'
 import en from './locales/en.json'
 import pt from './locales/pt.json'
 
+const savedLanguage = localStorage.getItem('language') || 'pt'
+
 const i18n = createI18n({
-  locale: 'pt',
+  locale: savedLanguage,
   messages: {
     en,
     pt,
