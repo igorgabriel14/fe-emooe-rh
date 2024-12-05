@@ -7,5 +7,5 @@ export default {
 </script>
 
 <template>
-  <h1>Simplifique a gestão de desempenho</h1>
+  <h1 class="text-3xl font-bold underline">Simplifique a gestão de desempenho</h1>
 </template>
