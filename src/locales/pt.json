@@ -2,5 +2,9 @@
   "title": "Seu hub conectado para gestão de pessoas, processos e desempenho | Emooe",
   "message": {
     "hello": "olá mundo"
+  },
+  "sidebar": {
+    "home": "Início",
+    "login": "Entrar"
   }
 }

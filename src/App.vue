@@ -1,17 +1,19 @@
 <script>
 import { RouterView } from 'vue-router'
+import BaseSidebar from './components/BaseSidebar.vue'
 
 export default {
   name: 'App',
   components: {
     RouterView,
-  },
-  data() {
-    return {}
+    BaseSidebar,
   },
 }
 </script>
 
 <template>
-  <RouterView />
+  <div class="flex h-screen">
+    <BaseSidebar />
+    <RouterView />
+  </div>
 </template>
